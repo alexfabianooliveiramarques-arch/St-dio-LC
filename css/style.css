@@ -254,33 +254,37 @@ section{
 }
 /* --- ESTILOS APENAS PARA CELULAR (Telas de até 768px de largura) --- */
 @media screen and (max-width: 768px) {
+}
+/* --- APENAS PARA TELAS DE CELULAR --- */
+@media screen and (max-width: 768px) {
 
-    /* 1. AJUSTE DO MENU (Fazer ele quebrar em linhas ou virar um menu hambúrguer) */
-    /* Substitua '.nome-da-sua-nav' e '.nome-da-sua-ul' pelas classes REAIS do seu HTML */
+    /* 1. MANTER O MENU LADO A LADO E AJUSTAR O TAMANHO */
     nav ul {
         display: flex;
-        flex-direction: column; /* Coloca os itens um embaixo do outro */
-        text-align: center;
-        gap: 10px; /* Dá um espacinho entre eles */
-        padding: 0;
+        flex-direction: row; /* Garante que fiquem lado a lado */
+        flex-wrap: wrap;     /* Se não couber em uma linha, ele pula para a de baixo sozinho */
+        justify-content: center; /* Centraliza os itens */
+        gap: 8px;           /* Diminui o espaço entre os botões (estava muito grande) */
+        padding: 10px 5px;  /* Diminui o preenchimento interno */
     }
 
-    nav ul li {
-        display: block; /* Garante que ocupem a linha toda */
-        margin: 0;
+    nav ul li a {
+        font-size: 13px;    /* Diminui a letra para caber mais itens na mesma linha */
+        padding: 5px;       /* Área de toque menor para não empurrar os vizinhos */
     }
 
-    /* 2. AJUSTE DOS TEXTOS GRANDES (Usar unidades relativas como 'vw' ou 'rem') */
-    /* Substitua '.nome-da-classe-do-titulo' pelo nome real no seu HTML */
+    /* 2. RESOLVER O TEXTO GIGANTE (O "ZOOM") */
+    /* Substitua pelo nome da sua classe de título (h1 ou .titulo) */
     h1, .titulo-principal {
-        font-size: 8vw; /* O texto vai ter 8% da largura da tela. Ele diminui com a tela. */
+        font-size: 28px !important; /* Tamanho fixo menor para celular */
+        width: 90%;                 /* Não deixa o texto encostar nas bordas */
+        margin: 0 auto;             /* Centraliza o bloco de texto */
+        text-align: center;
     }
-
-    /* 3. AJUSTE DA IMAGEM DE FUNDO/BANNE (Evitar que corte o rosto da pessoa) */
-    .banner-principal {
-        background-position: center; /* Centraliza a imagem no celular */
-        height: auto; /* Deixa o conteúdo definir a altura */
-        padding: 20px;
+    
+    /* 3. EMPURRAR O CONTEÚDO PARA BAIXO DO MENU */
+    /* Ajuste o nome da seção que tem a imagem de fundo */
+    section#inicio, .hero {
+        padding-top: 100px !important; 
     }
-
 }
