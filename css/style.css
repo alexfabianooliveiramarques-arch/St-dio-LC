@@ -1,0 +1,254 @@
+@media (max-width: 768px){
+
+    .galeria video{
+    width:100%;
+    max-width:300px;
+    height:200px;
+    object-fit:cover;
+    display:block;
+}
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    align-items:left ;
+}
+    video{
+width:100%;
+height:auto;
+}
+nav{
+flex-direction:column;
+gap:10px;
+}
+
+.hero h1{
+font-size:35px;
+}
+
+.cards{
+flex-direction:column;
+align-items:center;
+}
+
+input, textarea{
+width:90%;
+}
+
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#f5f5f5;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:black;
+color:white;
+position:fixed;
+width:100%;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+.hero{
+
+background-image: url("../imagens/");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:url("../imagens/leo1.webp") center/cover;
+color:white;
+text-align:center;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+button{
+padding:12px 25px;
+border:none;
+background:#e63946;
+color:white;
+border-radius:5px;
+cursor:pointer;
+margin-top:20px;
+}
+
+button:hover{
+background:#c72c3a;
+}
+
+section{
+padding:80px 20px;
+text-align:center;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+width:250px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.preco{
+font-size:22px;
+color:#27ae60;
+margin-top:10px;
+}
+
+.galeria{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+gap:15px;
+justify-content:left;
+margin-top:30px;
+}
+
+.galeria img{
+width:250px;
+height:180px;
+object-fit:cover;
+cursor:pointer;
+border-radius:10px;
+transition:0.3s;
+}
+
+.galeria img:hover{
+transform:scale(1.05);
+}
+
+form{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:15px;
+}
+
+input, textarea{
+width:300px;
+padding:10px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+#modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+justify-content:center;
+align-items:center;
+}
+
+#modal img{
+max-width:80%;
+max-height:80%;
+}
+
+@media (max-width: 768px){
+
+nav{
+flex-direction:column;
+gap:10px;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.cards{
+flex-direction:column;
+align-items:center;
+}
+
+.galeria{
+grid-template-columns:1fr;
+display:grid;
+ grid-template-columns:1fr;
+        justify-items:center;
+}
+
+input, textarea{
+width:90%;
+}
+
+}
+
+body{
+    overflow-x:hidden;
+}
+body{
+    overflow-x:hidden;
+}
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:15px;
+    width:100%;
+}
+
+.galeria video{
+    width:100%;
+    max-width:300px;
+    height:200px;
+    object-fit:cover;
+    display:block;
+}
+
+section{
+    max-width:1200px;
+    margin:0 auto;
+}
